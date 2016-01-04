@@ -1,8 +1,8 @@
 {
-  "name": "Planechase Angular App",
+  "name": "Planechase-Angular-App",
   "private": true,
   "version": "0.0.0",
-  "description": "Simple angular App",
+  "description": "Planechase angular App",
   "repository": "https://github.com/PlasmaBeam/planechase-angular-proj.git",
   "license": "MIT",
   "devDependencies": {
