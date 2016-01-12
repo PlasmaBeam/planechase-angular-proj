@@ -8,19 +8,20 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="resources/jquery.simplemodal.js"></script>
   <script src="js/app.js"></script>
   <script src="js/controller.js"></script>
 </head>
 <body ng-controller="MainViewCtrl">
-  <h2>{{message}}</h2>
-
   <!-- <table>
   <tr><th>row number</th></tr>
   <tr ng-repeat="i in imgList"><td>{{i}}</td></tr>
 </table> -->
 
   <!-- <img ng-src="{{mainImageUrl}}" ng-click="setImage()"> -->
-  <img style="height:80%; width:80%; "ng-src="{{mainImageUrl}}" ng-click="nextImage()">
+  <!-- <h2>{{message}}</h2>
+  <img style="height:80%; width:80%; "ng-src="{{mainImageUrl}}" ng-click="nextImage()"> -->
+
 
   <div ng-view></div>
 

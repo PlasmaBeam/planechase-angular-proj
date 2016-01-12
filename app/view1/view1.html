@@ -1,1 +1,39 @@
-<p>This is the partial for view 1.</p>
+<div id="mainContainer">
+<div id="leftMenu" >
+
+    <div id="buttonsMain">
+
+        <button style="width:80%; font: 20px Verdana; margin-top: 100%">Start!</button>
+
+        <div id="buttonsChangePla" style='margin-top: 100px'>
+
+            <button style="width:80%; font: 20px Verdana">Previous</button>
+            <button style="width:80%; font: 20px Verdana; margin-top: 4px">Next</button>
+
+        </div>
+
+        <div id="buttonsCounter" style="margin-top: 60px">
+
+            <button style="width:30%; font: 20px Verdana" >-</button>
+            <button style="width:35%; font: 20px Verdana">+</button>
+
+            <div>
+                <div style="margin-top: 20px; margin-left: 17%; float: left; color: #B5B5B5">Counter:  </div>
+                <div id="counterLabel" style="font: bold 25px Verdana; margin-top: 12px; margin-left: 10%; float: left; color: #B5B5B5">0</div>
+            </div>
+        </div>
+    </div>
+
+    <!--<button style="width:100%; font: 20px Verdana" onclick="ajaxjQuery('popuptest', 'imgContainer')" id="popupBtn">Popup</button>-->
+    <button style="width:100%; font: 20px Verdana" id="popupBtn">Popup</button>
+
+    <img src="resources/imgs/planechaselogo.jpg" style="width: 100%; margin-top: 163%" />
+</div>
+
+<div id="imgContainer">
+
+    <img src="resources/imgs/basewp2.jpg" alt="Planes & Phenomena!" style="height: 100%; width: 100%; z-index: 99; float: left" />
+
+</div>
+</div>
+<div id="popupContainer" style="visibility: none"></div>
