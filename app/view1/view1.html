@@ -1,39 +1,32 @@
-<div id="mainContainer">
-<div id="leftMenu" >
+
+  <div class="sidebarContainer">
 
     <div id="buttonsMain">
 
-        <button style="width:80%; font: 20px Verdana; margin-top: 100%">Start!</button>
+      <button class="buttonFont" style="float: left" ng-click="startUp()">Start!</button>
 
-        <div id="buttonsChangePla" style='margin-top: 100px'>
+      <div id="buttonsChangePla" style='margin-top: 100px; float: left'>
+        <button class="buttonFont" ng-click="previousImage()">Previous</button>
+        <button class="buttonFont" ng-click="nextImage()">Next</button>
+      </div>
 
-            <button style="width:80%; font: 20px Verdana">Previous</button>
-            <button style="width:80%; font: 20px Verdana; margin-top: 4px">Next</button>
+      <div id="buttonsCounter" style="margin-top: 60px; float: left">
+        <button class="buttonFont" ng-click="minusButtonPress()">-</button>
+        <button class="buttonFont" ng-click="plusButtonPress()">+</button>
 
+        <div style="float: left; width: 100%">
+          <div style="float: left; color: #B5B5B5; margin-top: 10px">Counter:  </div>
+          <div id="counterLabel" style="font: bold 25px Verdana; float: left; color: #B5B5B5">{{counter}}</div>
         </div>
-
-        <div id="buttonsCounter" style="margin-top: 60px">
-
-            <button style="width:30%; font: 20px Verdana" >-</button>
-            <button style="width:35%; font: 20px Verdana">+</button>
-
-            <div>
-                <div style="margin-top: 20px; margin-left: 17%; float: left; color: #B5B5B5">Counter:  </div>
-                <div id="counterLabel" style="font: bold 25px Verdana; margin-top: 12px; margin-left: 10%; float: left; color: #B5B5B5">0</div>
-            </div>
-        </div>
+      </div>
     </div>
 
     <!--<button style="width:100%; font: 20px Verdana" onclick="ajaxjQuery('popuptest', 'imgContainer')" id="popupBtn">Popup</button>-->
-    <button style="width:100%; font: 20px Verdana" id="popupBtn">Popup</button>
+    <button class="buttonFont" id="popupBtn" ng-click="openDialog()">Popup</button>
+    <img src="resources/imgs/planechaselogo.jpg" style="width: 97%; margin-top: 100%" />
+  </div>
 
-    <img src="resources/imgs/planechaselogo.jpg" style="width: 100%; margin-top: 163%" />
-</div>
-
-<div id="imgContainer">
-
-    <img src="resources/imgs/basewp2.jpg" alt="Planes & Phenomena!" style="height: 100%; width: 100%; z-index: 99; float: left" />
-
-</div>
-</div>
+  <div class="imageContainer">
+    <img ng-src="{{mainImageUrl}}" alt="Planes & Phenomena!"/>
+  </div>
 <div id="popupContainer" style="visibility: none"></div>

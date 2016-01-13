@@ -1,11 +1,13 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
+angular.module('planechaseApp', [
   'ngRoute',
-  'myApp.view1',
-  'myApp.view2'
+  'planechaseControllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.otherwise({
+    templateUrl:'view1/view1.html',
+    controller:'MainViewCtrl'
+  });
 }]);
