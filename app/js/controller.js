@@ -1,8 +1,12 @@
 'use strict';
 
-var phonecatApp = angular.module('planechaseControllers', []);
+var app = angular.module('planechaseControllers', ['angularModalService', 'ngAnimate']);
 
-phonecatApp.controller('MainViewCtrl', function ($scope) {
+app.controller('MainViewCtrl', ['$scope', 'ModalService', function($scope, ModalService) {
+
+// var planechaseController = angular.module('planechaseControllers', ['angularModalService']);
+//
+// planechaseController.controller('MainViewCtrl', function ($scope, ModalService) {
 
   $scope.currentImageCounter = 0;
 
@@ -99,7 +103,7 @@ phonecatApp.controller('MainViewCtrl', function ($scope) {
 
         break
       case 62:
-      
+
         break;
     }
   }
@@ -113,4 +117,14 @@ phonecatApp.controller('MainViewCtrl', function ($scope) {
     return false;
   }
 
-});
+  $scope.showAModal = function() {
+    ModalService.showModal({
+      template: "<div>Fry lives in {{futurama.city}}</div>",
+      controller: function() {
+        this.city = "New New York";
+      },
+      controllerAs : "futurama"
+    })
+  }
+
+}]);
