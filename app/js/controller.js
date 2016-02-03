@@ -20,6 +20,7 @@ app.controller('MainViewCtrl', ['$scope', 'ModalService', 'SharedDataService', f
     $scope.imgList = shuffle($scope.imgList);
     $scope.sharedData.imgList = $scope.imgList;
     $scope.mainImageUrl = "resources/imgs/PCP/" + $scope.imgList[0] + ".jpg";
+    $scope.sharedData.mainImageUrl = $scope.mainImageUrl;
   }
 
   $scope.nextImage = function() {
@@ -184,15 +185,21 @@ app.controller('PopupController', ['$scope', 'close', 'SharedDataService', funct
   }
 
   $scope.effect25Choice = function(choice){
-    for(var i = 0; i < $scope.sharedData.dataArray.length; i++){
+    /*
+      Parameters: choice = int of the chosen plane from the list of 5 in dataArray
+      Function: Sort through the 5 planes in dataArray and move them to the bottom of the main imgList
+    */
+    for(var i = 0; i < $scope.sharedData.dataArray.length; i++){ //dataArray is the array of 5 planes
       var aux = $scope.sharedData.dataArray[i];
       if(aux != choice){
         var j = 0;
         while(j < 4){
-          // if($scope.sharedData.imgList[j] )
+          var aux = $scope.sharedData.imgList.shift($scope.sharedData.imgList);
+          $scope.sharedData.imgList.push(aux);
         }
       }
     }
-    console.log(choice);
+    $scope.sharedData.mainImageUrl = $scope.sharedData.imgList[0];
+    //console.log(choice);
   }
 }]);
